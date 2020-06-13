@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		55306C7424948B3800020C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C7324948B3800020C95 /* AppDelegate.swift */; };
 		55306C7624948B3800020C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C7524948B3800020C95 /* SceneDelegate.swift */; };
-		55306C7824948B3800020C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C7724948B3800020C95 /* ViewController.swift */; };
-		55306C7B24948B3800020C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7924948B3800020C95 /* Main.storyboard */; };
+		55306C7824948B3800020C95 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C7724948B3800020C95 /* CameraViewController.swift */; };
+		55306C7B24948B3800020C95 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7924948B3800020C95 /* Camera.storyboard */; };
 		55306C7D24948B3D00020C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7C24948B3D00020C95 /* Assets.xcassets */; };
 		55306C8024948B3D00020C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7E24948B3D00020C95 /* LaunchScreen.storyboard */; };
 		55306C8B24948B3D00020C95 /* variousAspectCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C8A24948B3D00020C95 /* variousAspectCameraTests.swift */; };
@@ -38,8 +38,8 @@
 		55306C7024948B3800020C95 /* variousAspectCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = variousAspectCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55306C7324948B3800020C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55306C7524948B3800020C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55306C7724948B3800020C95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		55306C7A24948B3800020C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55306C7724948B3800020C95 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		55306C7A24948B3800020C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
 		55306C7C24948B3D00020C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55306C7F24948B3D00020C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55306C8124948B3D00020C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,10 +99,9 @@
 		55306C7224948B3800020C95 /* variousAspectCamera */ = {
 			isa = PBXGroup;
 			children = (
+				55306CA324948CF100020C95 /* Presentation */,
 				55306C7324948B3800020C95 /* AppDelegate.swift */,
 				55306C7524948B3800020C95 /* SceneDelegate.swift */,
-				55306C7724948B3800020C95 /* ViewController.swift */,
-				55306C7924948B3800020C95 /* Main.storyboard */,
 				55306C7C24948B3D00020C95 /* Assets.xcassets */,
 				55306C7E24948B3D00020C95 /* LaunchScreen.storyboard */,
 				55306C8124948B3D00020C95 /* Info.plist */,
@@ -126,6 +125,15 @@
 				55306C9724948B3D00020C95 /* Info.plist */,
 			);
 			path = variousAspectCameraUITests;
+			sourceTree = "<group>";
+		};
+		55306CA324948CF100020C95 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				55306C7924948B3800020C95 /* Camera.storyboard */,
+				55306C7724948B3800020C95 /* CameraViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +242,7 @@
 			files = (
 				55306C8024948B3D00020C95 /* LaunchScreen.storyboard in Resources */,
 				55306C7D24948B3D00020C95 /* Assets.xcassets in Resources */,
-				55306C7B24948B3800020C95 /* Main.storyboard in Resources */,
+				55306C7B24948B3800020C95 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55306C7824948B3800020C95 /* ViewController.swift in Sources */,
+				55306C7824948B3800020C95 /* CameraViewController.swift in Sources */,
 				55306C7424948B3800020C95 /* AppDelegate.swift in Sources */,
 				55306C7624948B3800020C95 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,12 +305,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		55306C7924948B3800020C95 /* Main.storyboard */ = {
+		55306C7924948B3800020C95 /* Camera.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				55306C7A24948B3800020C95 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Camera.storyboard;
 			sourceTree = "<group>";
 		};
 		55306C7E24948B3D00020C95 /* LaunchScreen.storyboard */ = {
@@ -366,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHQ4YYXMS6;
 				INFOPLIST_FILE = variousAspectCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MHQ4YYXMS6;
 				INFOPLIST_FILE = variousAspectCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

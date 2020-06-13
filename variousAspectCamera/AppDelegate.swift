@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  variousAspectCamera
 //
-//  Created by Kohei Hayashi on 2020/06/13.
+//  Created by Kohein Hayashi on 2020/06/13.
 //  Copyright © 2020 Kohei Hayashi. All rights reserved.
 //
 
