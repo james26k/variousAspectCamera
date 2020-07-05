@@ -15,6 +15,7 @@
 		55306C8024948B3D00020C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7E24948B3D00020C95 /* LaunchScreen.storyboard */; };
 		55306C8B24948B3D00020C95 /* variousAspectCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C8A24948B3D00020C95 /* variousAspectCameraTests.swift */; };
 		55306C9624948B3D00020C95 /* variousAspectCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */; };
+		556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556CBC2724AD6BC700347800 /* ShutterButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		55306C9124948B3D00020C95 /* variousAspectCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = variousAspectCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variousAspectCameraUITests.swift; sourceTree = "<group>"; };
 		55306C9724948B3D00020C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556CBC2724AD6BC700347800 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +132,19 @@
 		55306CA324948CF100020C95 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				556CBC2624AD6BB400347800 /* Component */,
 				55306C7924948B3800020C95 /* Camera.storyboard */,
 				55306C7724948B3800020C95 /* CameraViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		556CBC2624AD6BB400347800 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				556CBC2724AD6BC700347800 /* ShutterButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55306C7824948B3800020C95 /* CameraViewController.swift in Sources */,
+				556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */,
 				55306C7424948B3800020C95 /* AppDelegate.swift in Sources */,
 				55306C7624948B3800020C95 /* SceneDelegate.swift in Sources */,
 			);

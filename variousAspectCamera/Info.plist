@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>写真を撮影するためにカメラを利用します。</string>
+	<key>Privacy - Photo Library Addtions Usage Description</key>
+	<string>写真を保存するために写真アプリを利用します。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
