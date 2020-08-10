@@ -13,6 +13,10 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var captureView: UIView!
     @IBOutlet weak var shutterView: UIView!
     @IBOutlet weak var shutterButton: ShutterButton!
+    @IBOutlet weak var folderButton: UIButton!
+    // dependency
+    var viewModel: CameraViewModelInterface!
+    var router: CameraRouting!
     // CaptureSession
     private var captureSession = AVCaptureSession()
     // Device
@@ -80,6 +84,9 @@ class CameraViewController: UIViewController {
 
     @IBAction func takePicture(_ sender: UIButton) {
         print("shot")
+    }
+    @IBAction func openFolder(_ sender: UIButton) {
+        router.openFolder()
     }
 }
 

@@ -15,7 +15,14 @@
 		55306C8024948B3D00020C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55306C7E24948B3D00020C95 /* LaunchScreen.storyboard */; };
 		55306C8B24948B3D00020C95 /* variousAspectCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C8A24948B3D00020C95 /* variousAspectCameraTests.swift */; };
 		55306C9624948B3D00020C95 /* variousAspectCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */; };
+		55548D9424E0D5F000D25D20 /* CameraModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55548D9324E0D5F000D25D20 /* CameraModule.swift */; };
 		556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556CBC2724AD6BC700347800 /* ShutterButton.swift */; };
+		55733F9524DC374C00277206 /* ImageFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9424DC374C00277206 /* ImageFolderViewController.swift */; };
+		55733F9724DC375B00277206 /* ImageFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9624DC375B00277206 /* ImageFolderViewModel.swift */; };
+		55733F9924DC409900277206 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9824DC409900277206 /* CameraViewModel.swift */; };
+		55733F9B24DC411200277206 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9A24DC411200277206 /* CameraRouter.swift */; };
+		55733F9D24DC419F00277206 /* ImageFolderModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9C24DC419F00277206 /* ImageFolderModule.swift */; };
+		55733FA124DFFAE000277206 /* ImageFolderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733FA024DFFAE000277206 /* ImageFolderRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +57,14 @@
 		55306C9124948B3D00020C95 /* variousAspectCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = variousAspectCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variousAspectCameraUITests.swift; sourceTree = "<group>"; };
 		55306C9724948B3D00020C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55548D9324E0D5F000D25D20 /* CameraModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModule.swift; sourceTree = "<group>"; };
 		556CBC2724AD6BC700347800 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
+		55733F9424DC374C00277206 /* ImageFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderViewController.swift; sourceTree = "<group>"; };
+		55733F9624DC375B00277206 /* ImageFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderViewModel.swift; sourceTree = "<group>"; };
+		55733F9824DC409900277206 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		55733F9A24DC411200277206 /* CameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
+		55733F9C24DC419F00277206 /* ImageFolderModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderModule.swift; sourceTree = "<group>"; };
+		55733FA024DFFAE000277206 /* ImageFolderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +146,7 @@
 		55306CA324948CF100020C95 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				556CBC2624AD6BB400347800 /* Component */,
-				55306C7924948B3800020C95 /* Camera.storyboard */,
-				55306C7724948B3800020C95 /* CameraViewController.swift */,
+				55733F9124DC36F500277206 /* Module */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -145,6 +157,39 @@
 				556CBC2724AD6BC700347800 /* ShutterButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		55733F9124DC36F500277206 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				55733F9324DC371C00277206 /* ImageFolder */,
+				55733F9224DC370B00277206 /* Camera */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		55733F9224DC370B00277206 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				556CBC2624AD6BB400347800 /* Component */,
+				55733F9A24DC411200277206 /* CameraRouter.swift */,
+				55306C7924948B3800020C95 /* Camera.storyboard */,
+				55306C7724948B3800020C95 /* CameraViewController.swift */,
+				55733F9824DC409900277206 /* CameraViewModel.swift */,
+				55548D9324E0D5F000D25D20 /* CameraModule.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		55733F9324DC371C00277206 /* ImageFolder */ = {
+			isa = PBXGroup;
+			children = (
+				55733F9424DC374C00277206 /* ImageFolderViewController.swift */,
+				55733F9624DC375B00277206 /* ImageFolderViewModel.swift */,
+				55733F9C24DC419F00277206 /* ImageFolderModule.swift */,
+				55733FA024DFFAE000277206 /* ImageFolderRouter.swift */,
+			);
+			path = ImageFolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,10 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55733F9724DC375B00277206 /* ImageFolderViewModel.swift in Sources */,
 				55306C7824948B3800020C95 /* CameraViewController.swift in Sources */,
+				55733FA124DFFAE000277206 /* ImageFolderRouter.swift in Sources */,
+				55733F9D24DC419F00277206 /* ImageFolderModule.swift in Sources */,
 				556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */,
 				55306C7424948B3800020C95 /* AppDelegate.swift in Sources */,
+				55733F9524DC374C00277206 /* ImageFolderViewController.swift in Sources */,
+				55548D9424E0D5F000D25D20 /* CameraModule.swift in Sources */,
+				55733F9924DC409900277206 /* CameraViewModel.swift in Sources */,
 				55306C7624948B3800020C95 /* SceneDelegate.swift in Sources */,
+				55733F9B24DC411200277206 /* CameraRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
