@@ -171,12 +171,12 @@
 		55733F9224DC370B00277206 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				556CBC2624AD6BB400347800 /* Component */,
-				55733F9A24DC411200277206 /* CameraRouter.swift */,
+				55548D9324E0D5F000D25D20 /* CameraModule.swift */,
 				55306C7924948B3800020C95 /* Camera.storyboard */,
 				55306C7724948B3800020C95 /* CameraViewController.swift */,
 				55733F9824DC409900277206 /* CameraViewModel.swift */,
-				55548D9324E0D5F000D25D20 /* CameraModule.swift */,
+				55733F9A24DC411200277206 /* CameraRouter.swift */,
+				556CBC2624AD6BB400347800 /* Component */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 		55733F9324DC371C00277206 /* ImageFolder */ = {
 			isa = PBXGroup;
 			children = (
+				55733F9C24DC419F00277206 /* ImageFolderModule.swift */,
 				55733F9424DC374C00277206 /* ImageFolderViewController.swift */,
 				55733F9624DC375B00277206 /* ImageFolderViewModel.swift */,
-				55733F9C24DC419F00277206 /* ImageFolderModule.swift */,
 				55733FA024DFFAE000277206 /* ImageFolderRouter.swift */,
 			);
 			path = ImageFolder;
