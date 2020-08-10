@@ -1,6 +1,0 @@
-framework module Pods_variousAspectCameraTests {
-  umbrella header "Pods-variousAspectCameraTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
