@@ -15,6 +15,7 @@ enum ImageFolderModule {
         let router = ImageFolderRouter(viewController: viewController)
         viewController.viewModel = viewModel
         viewController.router = router
+        viewController.isModalInPresentation = true
         return viewController
     }
 }
