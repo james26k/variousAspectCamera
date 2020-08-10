@@ -68,8 +68,8 @@ class CameraViewController: UIViewController {
             captureSession.addOutput(photoOutput!)
         }
         catch {
-            let alert = UIAlertController(title: "error", message: "デバイスの設定に失敗しました。", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "閉じる", style: .cancel))
+            let alert = UIAlertController(title: "error", message: "missing capture device", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "close", style: .cancel))
             present(alert, animated: true)
         }
     }

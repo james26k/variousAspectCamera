@@ -12,11 +12,8 @@ import UIKit
 enum CameraModule {
     static func setup() -> CameraViewController {
         let storyboard = UIStoryboard(name: "Camera", bundle: nil)
-        guard
-            let initialVC = storyboard.instantiateInitialViewController() as? CameraViewController
-        else {
-            fatalError("missing initialVC")
-        }
+        guard let initialVC = storyboard.instantiateInitialViewController() as? CameraViewController
+        else { fatalError("missing initialVC") }
         let viewModel = CameraViewModel()
         let router = CameraRouter(viewController: initialVC)
         initialVC.viewModel = viewModel
