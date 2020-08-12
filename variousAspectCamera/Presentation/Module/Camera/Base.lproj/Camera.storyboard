@@ -19,10 +19,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Js-Tpl">
-                                        <rect key="frame" x="20" y="64" width="60" height="50"/>
+                                        <rect key="frame" x="20" y="807.5" width="41.5" height="34.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Wh8-Re-9uU"/>
-                                            <constraint firstAttribute="width" constant="60" id="uyY-7J-M3f"/>
+                                            <constraint firstAttribute="width" secondItem="Oyw-Js-Tpl" secondAttribute="height" multiplier="6:5" id="Xji-xO-9f7"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <state key="normal" image="photo.on.rectangle" catalog="system"/>
@@ -32,6 +31,9 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Oyw-Js-Tpl" firstAttribute="width" secondItem="NlH-3F-yHR" secondAttribute="width" multiplier="0.1" id="2z9-0Z-mm4"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="wAK-a3-CDw" appends="YES" id="hG9-xf-I0b"/>
                                 </connections>
@@ -40,17 +42,14 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="cSH-B1-ePQ" firstAttribute="bottom" secondItem="Oyw-Js-Tpl" secondAttribute="bottom" constant="20" id="8Ow-B1-GG2"/>
                             <constraint firstAttribute="bottom" secondItem="NlH-3F-yHR" secondAttribute="bottom" id="Bh1-k8-v6e"/>
-                            <constraint firstItem="Oyw-Js-Tpl" firstAttribute="top" secondItem="cSH-B1-ePQ" secondAttribute="top" constant="20" id="RkZ-aB-oKb"/>
                             <constraint firstItem="Oyw-Js-Tpl" firstAttribute="leading" secondItem="cSH-B1-ePQ" secondAttribute="leading" constant="20" id="g2v-2A-au8"/>
                             <constraint firstItem="NlH-3F-yHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uhU-0m-rkC"/>
                             <constraint firstAttribute="trailing" secondItem="NlH-3F-yHR" secondAttribute="trailing" id="uzg-GF-b4z"/>
                             <constraint firstItem="NlH-3F-yHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wYA-M0-5MH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cSH-B1-ePQ"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="wAK-a3-CDw" appends="YES" id="Db6-gv-BgO"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="captureView" destination="NlH-3F-yHR" id="hzh-3d-Xpi"/>
@@ -58,7 +57,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wAK-a3-CDw">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="wAK-a3-CDw">
                     <connections>
                         <action selector="takePhoto:" destination="BYZ-38-t0r" id="862-b1-Dog"/>
                     </connections>
