@@ -16,93 +16,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlH-3F-yHR" userLabel="Capture View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="698"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-Rh-58i" userLabel="Shutter View">
-                                <rect key="frame" x="0.0" y="742" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vvR-2i-Zqy">
-                                        <rect key="frame" x="167" y="20.5" width="80" height="79"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Js-Tpl">
+                                        <rect key="frame" x="20" y="64" width="60" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="77E-8F-gR1"/>
-                                            <constraint firstAttribute="height" constant="80" id="KJf-BF-zym"/>
-                                            <constraint firstAttribute="width" secondItem="vvR-2i-Zqy" secondAttribute="height" multiplier="1:1" id="VoQ-qe-709"/>
+                                            <constraint firstAttribute="height" constant="50" id="Wh8-Re-9uU"/>
+                                            <constraint firstAttribute="width" constant="60" id="uyY-7J-M3f"/>
                                         </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZV-IE-dAM" customClass="ShutterButton" customModule="variousAspectCamera" customModuleProvider="target">
-                                        <rect key="frame" x="182" y="35" width="50" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="bbm-EC-jdf"/>
-                                            <constraint firstAttribute="width" secondItem="8ZV-IE-dAM" secondAttribute="height" multiplier="1:1" id="y2f-Cr-UJy"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFv-mZ-ph3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I6-Fm-pxc">
-                                        <rect key="frame" x="30" y="45" width="60" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="KIQ-jK-RMy"/>
-                                            <constraint firstAttribute="height" constant="50" id="YrN-on-xKg"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <state key="normal" image="photo.on.rectangle" catalog="system"/>
                                         <connections>
-                                            <action selector="openFolder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujw-5V-BHA"/>
+                                            <action selector="openFolder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CF9-pU-cSH"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="15k-st-hF3"/>
-                                    <constraint firstItem="1I6-Fm-pxc" firstAttribute="leading" secondItem="bpP-Rh-58i" secondAttribute="leading" constant="30" id="1aK-wY-2Up"/>
-                                    <constraint firstItem="8ZV-IE-dAM" firstAttribute="centerX" secondItem="bpP-Rh-58i" secondAttribute="centerX" id="AJa-kS-RH6"/>
-                                    <constraint firstItem="8ZV-IE-dAM" firstAttribute="centerY" secondItem="bpP-Rh-58i" secondAttribute="centerY" id="Mwr-np-ynV"/>
-                                    <constraint firstItem="vvR-2i-Zqy" firstAttribute="centerX" secondItem="bpP-Rh-58i" secondAttribute="centerX" id="e2O-eC-SUv"/>
-                                    <constraint firstItem="vvR-2i-Zqy" firstAttribute="centerY" secondItem="bpP-Rh-58i" secondAttribute="centerY" id="wL9-ec-nqg"/>
-                                    <constraint firstItem="1I6-Fm-pxc" firstAttribute="centerY" secondItem="bpP-Rh-58i" secondAttribute="centerY" constant="10" id="xdI-Su-Ct0"/>
-                                </constraints>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wAK-a3-CDw" appends="YES" id="hG9-xf-I0b"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="NlH-3F-yHR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="61C-n9-sum"/>
-                            <constraint firstItem="NlH-3F-yHR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HZJ-GR-oyY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bpP-Rh-58i" secondAttribute="trailing" id="Ms8-1k-Bht"/>
-                            <constraint firstItem="NlH-3F-yHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cdG-6I-u7i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bpP-Rh-58i" secondAttribute="bottom" id="eJo-z0-s4T"/>
-                            <constraint firstItem="bpP-Rh-58i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fnz-je-mCp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NlH-3F-yHR" secondAttribute="trailing" id="sBw-uw-icf"/>
-                            <constraint firstItem="NlH-3F-yHR" firstAttribute="width" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="width" id="uck-s3-IFW"/>
-                            <constraint firstItem="bpP-Rh-58i" firstAttribute="top" secondItem="NlH-3F-yHR" secondAttribute="bottom" id="xrY-kI-pWh"/>
+                            <constraint firstAttribute="bottom" secondItem="NlH-3F-yHR" secondAttribute="bottom" id="Bh1-k8-v6e"/>
+                            <constraint firstItem="Oyw-Js-Tpl" firstAttribute="top" secondItem="cSH-B1-ePQ" secondAttribute="top" constant="20" id="RkZ-aB-oKb"/>
+                            <constraint firstItem="Oyw-Js-Tpl" firstAttribute="leading" secondItem="cSH-B1-ePQ" secondAttribute="leading" constant="20" id="g2v-2A-au8"/>
+                            <constraint firstItem="NlH-3F-yHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uhU-0m-rkC"/>
+                            <constraint firstAttribute="trailing" secondItem="NlH-3F-yHR" secondAttribute="trailing" id="uzg-GF-b4z"/>
+                            <constraint firstItem="NlH-3F-yHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wYA-M0-5MH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="cSH-B1-ePQ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wAK-a3-CDw" appends="YES" id="Db6-gv-BgO"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="captureView" destination="NlH-3F-yHR" id="hzh-3d-Xpi"/>
-                        <outlet property="folderButton" destination="1I6-Fm-pxc" id="KvY-NG-rTo"/>
-                        <outlet property="shutterButton" destination="8ZV-IE-dAM" id="q1b-A4-eNM"/>
-                        <outlet property="shutterView" destination="bpP-Rh-58i" id="npa-iG-RCN"/>
+                        <outlet property="folderButton" destination="Oyw-Js-Tpl" id="bWE-CJ-IkD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wAK-a3-CDw">
+                    <connections>
+                        <action selector="takePhoto:" destination="BYZ-38-t0r" id="862-b1-Dog"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
     <resources>
-        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
     </resources>
 </document>

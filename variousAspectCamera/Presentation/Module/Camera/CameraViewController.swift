@@ -11,8 +11,6 @@ import AVFoundation
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var captureView: UIView!
-    @IBOutlet weak var shutterView: UIView!
-    @IBOutlet weak var shutterButton: ShutterButton!
     @IBOutlet weak var folderButton: UIButton!
     // dependency
     var viewModel: CameraViewModelInterface!
@@ -81,10 +79,10 @@ class CameraViewController: UIViewController {
         cameraPreviewLayer?.frame = captureView.frame
         captureView.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
-
-    @IBAction func takePicture(_ sender: UIButton) {
+    @IBAction func takePhoto(_ sender: UITapGestureRecognizer) {
         print("shot")
     }
+
     @IBAction func openFolder(_ sender: UIButton) {
         router.openFolder()
     }
