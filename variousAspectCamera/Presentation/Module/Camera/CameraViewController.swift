@@ -16,14 +16,12 @@ class CameraViewController: UIViewController {
     var viewModel: CameraViewModelInterface!
     var router: CameraRouting!
     // CaptureSession
-    private var captureSession = AVCaptureSession()
+    private let captureSession = AVCaptureSession()
     // Device
-    private var mainCamera: AVCaptureDevice?
-    private var innerCamera: AVCaptureDevice?
     private var currentCamera: AVCaptureDevice?
     // OutPut
     private var photoOutput: AVCapturePhotoOutput?
-    // PreviewLayer
+    // PreviewLayer(Viewに描画する内容を管理するオブジェクト)
     private var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
 
     override func loadView() {
@@ -36,6 +34,7 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         setupInputOutput()
         setupPreviewLayer()
+        // sessionの起動
         captureSession.startRunning()
     }
     // カメラの画質設定
@@ -44,25 +43,26 @@ class CameraViewController: UIViewController {
     }
     // 利用できるデバイスの取得、設定
     private func setupDevice() {
+        // カメラデバイスのプロパティ設定
         let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera],
                                                                 mediaType: .video,
                                                                 position: .unspecified)
+        // 設定を満たしたデバイスを取得
         let devices = discoverySession.devices
-
-        mainCamera = devices.first { $0.position == .back }
-        innerCamera = devices.first { $0.position == .front }
-
-        currentCamera = mainCamera
+        // 取得したデバイスから条件に合うものをcaptureDeviceに設定
+        currentCamera = devices.first { $0.position == .back }
     }
     // 入出力データの設定
     private func setupInputOutput() {
         guard let currentCamera = currentCamera else { return }
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera)
-            captureSession.addInput(captureDeviceInput)
+            guard captureSession.canAddInput(captureDeviceInput) else { throw NSError() }
             photoOutput = AVCapturePhotoOutput()
             photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])],
                                                        completionHandler: nil)
+            // 上記の入出力の設定を適用
+            captureSession.addInput(captureDeviceInput)
             captureSession.addOutput(photoOutput!)
         }
         catch {
@@ -79,6 +79,7 @@ class CameraViewController: UIViewController {
         cameraPreviewLayer?.frame = captureView.frame
         captureView.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
+
     @IBAction func takePhoto(_ sender: UITapGestureRecognizer) {
         print("shot")
     }
