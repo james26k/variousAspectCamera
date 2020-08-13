@@ -81,11 +81,22 @@ class CameraViewController: UIViewController {
     }
 
     @IBAction func takePhoto(_ sender: UITapGestureRecognizer) {
-        print("shot")
+        // 撮影の設定を管理するオブジェクト(１回につき１設定)
+        let photoSettings = AVCapturePhotoSettings()
+        photoOutput?.capturePhoto(with: photoSettings, delegate: self)
     }
 
     @IBAction func openFolder(_ sender: UIButton) {
         router.openFolder()
+    }
+}
+// 画像データをハンドリングする
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            guard let image = UIImage(data: imageData) else { return }
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
     }
 }
 
