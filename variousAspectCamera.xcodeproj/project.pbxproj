@@ -16,6 +16,10 @@
 		55306C8B24948B3D00020C95 /* variousAspectCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C8A24948B3D00020C95 /* variousAspectCameraTests.swift */; };
 		55306C9624948B3D00020C95 /* variousAspectCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */; };
 		55548D9424E0D5F000D25D20 /* CameraModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55548D9324E0D5F000D25D20 /* CameraModule.swift */; };
+		555BE62124E7649B00D57E7C /* CameraDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BE62024E7649B00D57E7C /* CameraDeviceManager.swift */; };
+		555BE62324E76DDF00D57E7C /* GetCameraDeviceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BE62224E76DDF00D57E7C /* GetCameraDeviceUseCase.swift */; };
+		555BE62524E76F2200D57E7C /* ConfigureCameraDeviceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BE62424E76F2200D57E7C /* ConfigureCameraDeviceUseCase.swift */; };
+		555BE62724E77A3600D57E7C /* GetCameraPreviewLayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BE62624E77A3600D57E7C /* GetCameraPreviewLayerUseCase.swift */; };
 		556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556CBC2724AD6BC700347800 /* ShutterButton.swift */; };
 		55733F9524DC374C00277206 /* ImageFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9424DC374C00277206 /* ImageFolderViewController.swift */; };
 		55733F9724DC375B00277206 /* ImageFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55733F9624DC375B00277206 /* ImageFolderViewModel.swift */; };
@@ -63,6 +67,10 @@
 		55306C9524948B3D00020C95 /* variousAspectCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variousAspectCameraUITests.swift; sourceTree = "<group>"; };
 		55306C9724948B3D00020C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55548D9324E0D5F000D25D20 /* CameraModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModule.swift; sourceTree = "<group>"; };
+		555BE62024E7649B00D57E7C /* CameraDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDeviceManager.swift; sourceTree = "<group>"; };
+		555BE62224E76DDF00D57E7C /* GetCameraDeviceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCameraDeviceUseCase.swift; sourceTree = "<group>"; };
+		555BE62424E76F2200D57E7C /* ConfigureCameraDeviceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCameraDeviceUseCase.swift; sourceTree = "<group>"; };
+		555BE62624E77A3600D57E7C /* GetCameraPreviewLayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCameraPreviewLayerUseCase.swift; sourceTree = "<group>"; };
 		556CBC2724AD6BC700347800 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
 		55733F9424DC374C00277206 /* ImageFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderViewController.swift; sourceTree = "<group>"; };
 		55733F9624DC375B00277206 /* ImageFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFolderViewModel.swift; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 		55306C7224948B3800020C95 /* variousAspectCamera */ = {
 			isa = PBXGroup;
 			children = (
+				555BE61F24E763D600D57E7C /* Infrastructure */,
+				555BE61D24E762C300D57E7C /* Domain */,
 				55306CA324948CF100020C95 /* Presentation */,
 				55306C7324948B3800020C95 /* AppDelegate.swift */,
 				55306C7524948B3800020C95 /* SceneDelegate.swift */,
@@ -166,6 +176,32 @@
 				55733F9124DC36F500277206 /* Module */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		555BE61D24E762C300D57E7C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				555BE61E24E7639200D57E7C /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		555BE61E24E7639200D57E7C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				555BE62224E76DDF00D57E7C /* GetCameraDeviceUseCase.swift */,
+				555BE62424E76F2200D57E7C /* ConfigureCameraDeviceUseCase.swift */,
+				555BE62624E77A3600D57E7C /* GetCameraPreviewLayerUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		555BE61F24E763D600D57E7C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				555BE62024E7649B00D57E7C /* CameraDeviceManager.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		556CBC2624AD6BB400347800 /* Component */ = {
@@ -471,15 +507,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555BE62124E7649B00D57E7C /* CameraDeviceManager.swift in Sources */,
 				55733F9724DC375B00277206 /* ImageFolderViewModel.swift in Sources */,
 				55306C7824948B3800020C95 /* CameraViewController.swift in Sources */,
 				55733FA124DFFAE000277206 /* ImageFolderRouter.swift in Sources */,
 				55733F9D24DC419F00277206 /* ImageFolderModule.swift in Sources */,
+				555BE62324E76DDF00D57E7C /* GetCameraDeviceUseCase.swift in Sources */,
 				556CBC2824AD6BC700347800 /* ShutterButton.swift in Sources */,
 				55306C7424948B3800020C95 /* AppDelegate.swift in Sources */,
+				555BE62724E77A3600D57E7C /* GetCameraPreviewLayerUseCase.swift in Sources */,
 				55733F9524DC374C00277206 /* ImageFolderViewController.swift in Sources */,
 				55548D9424E0D5F000D25D20 /* CameraModule.swift in Sources */,
 				55733F9924DC409900277206 /* CameraViewModel.swift in Sources */,
+				555BE62524E76F2200D57E7C /* ConfigureCameraDeviceUseCase.swift in Sources */,
 				55306C7624948B3800020C95 /* SceneDelegate.swift in Sources */,
 				55733F9B24DC411200277206 /* CameraRouter.swift in Sources */,
 			);
