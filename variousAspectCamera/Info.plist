@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>撮影した写真をアルバムへ保存します。</string>
+	<string>写真を保存するために写真アプリを利用します</string>
 	<key>NSCameraUsageDescription</key>
-	<string>カメラの撮影に必須です。</string>
+	<string>写真を撮影するためにカメラを利用します</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
