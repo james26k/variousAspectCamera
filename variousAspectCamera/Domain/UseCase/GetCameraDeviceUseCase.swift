@@ -15,7 +15,7 @@ protocol GetCameraDeviceUseCaseType {
 
 struct GetCameraDeviceUseCase: GetCameraDeviceUseCaseType {
     func callAsFunction() -> AVCaptureDevice? {
-        CameraDeviceManager.shared.getCamera(deviceTypes: [.builtInDualCamera],
+        CameraDeviceManager.shared.getCamera(deviceTypes: [.builtInWideAngleCamera],
                                              position: .back)
     }
 }

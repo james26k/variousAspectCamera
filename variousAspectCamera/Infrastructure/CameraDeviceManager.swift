@@ -13,6 +13,7 @@ final class CameraDeviceManager {
     static let shared = CameraDeviceManager()
     // required value
     private var captureSession: AVCaptureSession!
+    //TODO: 単一プロパティを用意
 
     private init() {
         captureSession = AVCaptureSession()
@@ -39,6 +40,16 @@ final class CameraDeviceManager {
         cameraPreviewLayer.videoGravity = gravity
         cameraPreviewLayer.connection?.videoOrientation = orientation
         return cameraPreviewLayer
+    }
+
+    func startSession() {
+        captureSession.startRunning()
+    }
+
+    func takePhoto(delegate: AVCapturePhotoCaptureDelegate) {
+        let photoSetting = AVCapturePhotoSettings()
+        guard let output = captureSession.outputs.first as? AVCapturePhotoOutput else { fatalError() }
+        output.capturePhoto(with: photoSetting, delegate: delegate)
     }
     // カメラの画質設定
     private func setupImageQuality() {
