@@ -22,6 +22,7 @@ struct CameraRouter: CameraRouting {
 
     func openFolder() {
         let navigationController = UINavigationController(rootViewController: ImageFolderModule.setup())
+        navigationController.modalPresentationStyle = .fullScreen
         viewController.present(navigationController, animated: true)
     }
 }
