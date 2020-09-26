@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,49 +19,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlH-3F-yHR" userLabel="Capture View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Js-Tpl">
-                                        <rect key="frame" x="20" y="807.5" width="41.5" height="34.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Oyw-Js-Tpl" secondAttribute="height" multiplier="6:5" id="Xji-xO-9f7"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <state key="normal" image="photo.on.rectangle" catalog="system"/>
-                                        <connections>
-                                            <action selector="openFolder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CF9-pU-cSH"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHC-9i-Ief">
-                                        <rect key="frame" x="167" y="762" width="80" height="80"/>
+                                        <rect key="frame" x="20" y="798" width="44" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="Zqr-Gd-4UB"/>
-                                            <constraint firstAttribute="width" constant="80" id="puY-6D-d6a"/>
+                                            <constraint firstAttribute="height" constant="44" id="Zqr-Gd-4UB"/>
+                                            <constraint firstAttribute="width" constant="44" id="puY-6D-d6a"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="largecircle.fill.circle" catalog="system"/>
                                         <connections>
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gp0-ia-cuM"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-Js-Tpl">
+                                        <rect key="frame" x="20" y="56" width="41.5" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Oyw-Js-Tpl" secondAttribute="height" multiplier="6:5" id="Xji-xO-9f7"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="photo.on.rectangle" catalog="system"/>
+                                        <connections>
+                                            <action selector="openFolder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CF9-pU-cSH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Oyw-Js-Tpl" firstAttribute="width" secondItem="NlH-3F-yHR" secondAttribute="width" multiplier="0.1" id="2z9-0Z-mm4"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="cSH-B1-ePQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="tHC-9i-Ief" firstAttribute="centerX" secondItem="cSH-B1-ePQ" secondAttribute="centerX" id="0t5-g1-1bk"/>
-                            <constraint firstItem="cSH-B1-ePQ" firstAttribute="bottom" secondItem="Oyw-Js-Tpl" secondAttribute="bottom" constant="20" id="8Ow-B1-GG2"/>
                             <constraint firstAttribute="bottom" secondItem="NlH-3F-yHR" secondAttribute="bottom" id="Bh1-k8-v6e"/>
                             <constraint firstItem="tHC-9i-Ief" firstAttribute="bottom" secondItem="cSH-B1-ePQ" secondAttribute="bottom" constant="-20" id="Gll-kK-SP5"/>
+                            <constraint firstItem="Oyw-Js-Tpl" firstAttribute="topMargin" secondItem="cSH-B1-ePQ" secondAttribute="top" constant="20" id="I8i-Qn-L5o"/>
                             <constraint firstItem="Oyw-Js-Tpl" firstAttribute="leading" secondItem="cSH-B1-ePQ" secondAttribute="leading" constant="20" id="g2v-2A-au8"/>
+                            <constraint firstItem="tHC-9i-Ief" firstAttribute="leading" secondItem="cSH-B1-ePQ" secondAttribute="leading" constant="20" id="nii-5v-1tM"/>
                             <constraint firstItem="NlH-3F-yHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uhU-0m-rkC"/>
                             <constraint firstAttribute="trailing" secondItem="NlH-3F-yHR" secondAttribute="trailing" id="uzg-GF-b4z"/>
                             <constraint firstItem="NlH-3F-yHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wYA-M0-5MH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="cSH-B1-ePQ"/>
                     </view>
                     <connections>
                         <outlet property="captureView" destination="NlH-3F-yHR" id="hzh-3d-Xpi"/>
@@ -74,6 +75,6 @@
     </scenes>
     <resources>
         <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
-        <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="96"/>
     </resources>
 </document>
