@@ -61,7 +61,7 @@ final class CameraDeviceManager {
             let photoInput = try AVCaptureDeviceInput(device: camera)
             let photoOutput: AVCapturePhotoOutput = {
                 let photoOutput = AVCapturePhotoOutput()
-                let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey : codecType])
+                let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: codecType])
                 photoOutput.setPreparedPhotoSettingsArray([photoSettings])
                 return photoOutput
             }()
