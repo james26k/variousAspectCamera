@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 enum ImageFolderModule {
-    static func setup() -> ImageFolderViewController {
+    static func setup(image: UIImage) -> ImageFolderViewController {
         let viewController = ImageFolderViewController()
-        let viewModel = ImageFolderViewModel()
+        let viewModel = ImageFolderViewModel(image: image)
         let router = ImageFolderRouter(viewController: viewController)
         viewController.viewModel = viewModel
         viewController.router = router

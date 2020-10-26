@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol CameraRouting {
-    func openFolder()
+    func openFolder(image: UIImage)
 }
 
 struct CameraRouter: CameraRouting {
@@ -20,8 +20,8 @@ struct CameraRouter: CameraRouting {
         self.viewController = viewController
     }
 
-    func openFolder() {
-        let navigationController = UINavigationController(rootViewController: ImageFolderModule.setup())
+    func openFolder(image: UIImage) {
+        let navigationController = UINavigationController(rootViewController: ImageFolderModule.setup(image: image))
         navigationController.modalPresentationStyle = .fullScreen
         viewController.present(navigationController, animated: true)
     }

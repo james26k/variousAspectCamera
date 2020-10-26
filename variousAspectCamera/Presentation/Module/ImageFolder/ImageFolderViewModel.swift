@@ -7,9 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ImageFolderViewModelInterface {}
+protocol ImageFolderViewModelInterface {
+    var pickerImage: UIImage { get }
+}
 
 struct ImageFolderViewModel: ImageFolderViewModelInterface {
-    init() {}
+    let pickerImage: UIImage
+
+    init(image: UIImage) {
+        pickerImage = image
+    }
 }

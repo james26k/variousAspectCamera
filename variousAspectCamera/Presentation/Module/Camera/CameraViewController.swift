@@ -67,7 +67,16 @@ class CameraViewController: UIViewController {
     }
 
     @IBAction func openFolder(_ sender: UIButton) {
-        router.openFolder()
+        //router.openFolder()
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let pickerController:UIImagePickerController = UIImagePickerController()
+            pickerController.delegate = self
+            pickerController.sourceType = .photoLibrary
+            pickerController.modalPresentationStyle = .fullScreen
+            present(pickerController, animated: true)
+        } else {
+            print("disable library in simulator")
+        }
     }
 }
 // 画像データをハンドリングする
@@ -80,6 +89,18 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         }
     }
 }
+
+extension CameraViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        picker.dismiss(animated: true) { [router] in
+            router?.openFolder(image: image)
+        }
+    }
+}
+
+extension CameraViewController: UINavigationControllerDelegate {}
 
 private extension UIImage {
     func resizeTo(aspectRatio: AspectRatio) -> UIImage {
@@ -108,7 +129,7 @@ private extension UIImage {
         return self
     }
 }
-// outputで出力されるimageOrientationがいち
+// outputで出力されるimageOrientationがずれてしまっているので修正する
 extension UIImage.Orientation {
     func adjustForSaving() -> Self {
         switch UIDevice.current.orientation {
